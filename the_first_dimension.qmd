@@ -1,0 +1,43 @@
+# The Ising Model in One Dimension
+
+Before we get to the lattice structure, let us consider as Ising did the phase transition properties of a one dimensional model- a linear chain.
+
+![A Linear Chain](images/1d_ising_model_picture.png){fig-align="center"}
+
+Originally, the 1d model was used as a theoretical tool- a base case to begin exploration of magnetic systems in statistical mechanics. It is not supposed to represent any physical system, though it had been used to that effect in modern times.
+
+$$
+E=-J \sum_{i, j=n n(i)}^N s_i s_j-H \sum_{i=1}^N s_i
+$$
+
+Here we have what is called the Hamiltonian for the model. A Hamiltonian (named after William Hamilton) is a function which describes the total energy of a physical system. It does this by giving us the sum of the products (interactions) between the particles of the system as well as the sum of the interactions between those individual particles as well as any external field that may be interacting with the system. This can be thought of more briefly as the kinetic energy of the particles and the potential energy of the system. Oftentimes we study the system as having no external field, so the second term is set to zero, leaving us with just the first:
+
+$$
+E=-J \sum_{i, j=n n(i)}^N s_i s_j
+$$
+
+From Boltzmann we know that the probability of finding a particular spin configuration is the proportion of that configuration over the sum of all possible configurations:
+
+$$
+p({s_i})=1/Z * exp(-\beta E({s_i})),
+$$ $$
+\beta \equiv 1 / K_BT,
+$$ $$
+Z = \sum_{i} exp(-\beta E_j)
+$$
+
+Note the indices under the summation of the partition function as well as the hamiltonian- there is one for each. The trick to keep in mind there is that you are not just summing over each particle in the system but also every single potential energy state for that particle:
+
+$$Z = \sum_{s_1= \pm 1} \sum_{s_2 = \pm 1} ... \sum_{s_n \pm 1} exp(-\beta J (s_1s_2+s_2s_3+...)$$
+
+To simplify this expression, we introduce a new variable, $$ \mu_i := s_i * s_{i+1} $$, allowing us to rewrite the above equation as:
+
+$$
+Z = 2 * \sum_{\mu} exp(\beta J \sum_{i=1}^N \mu_{i})
+$$
+
+where the two comes from the two possible configurations for the fist spin in the chain.
+
+This value for Z allows us to enumerate all of the microstates the system can potentially take.
+
+-   explain theoretical desire for 1d ising model, go through mathematical breakdown, build up explanation, give physical interpretation, explain how to get to transition matrices, set up 2d model.

@@ -1,0 +1,7 @@
+# The Second Dimension
+
+The 2D Ising model is a mathematical model used to describe the behavior of a two-dimensional lattice of magnetic spins. Each spin can have a value of either "up" or "down," and the spins interact with each other through the Ising interaction, which is a measure of the energy of the system. The energy of the system in the 2D Ising model is given by the following equation:
+
+$$ E = -J \sum_{ij} S_iS_j $$
+
+Where $J$ is the coupling constant, which represents the strength of the interaction between spins, $S_i$ and $S_j$ are the values of the spins at positions $i$ and $j$, and the sum is taken over all pairs of spins on the lattice. The 2D Ising model can be used to study the behavior of ferromagnetic materials, where the spins are aligned and the system has a low energy, and the transition to an ordered state as the temperature is lowered. It has also been used to study phase transitions in other systems, such as the behavior of fluids and gases.

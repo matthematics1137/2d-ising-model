@@ -1,0 +1,119 @@
+# History of the Ising Model {.unnumbered}
+
+### "The Ising model is a crude attempt to simulate the structure
+
+### of a physical ferromagnetic substance . . . . Its main virtue lies
+
+### in the fact that a two-dimensional Ising model yields to an
+
+### exact treatment in statistical mechanics. It is the only
+
+### nontrivial example of a phase transition that can be worked out
+
+### mathematically" - Kerson Huang 1963
+
+A feature of statistical mechanics post WWII is that it sacrifices perfect modeling of physical reality for mathematical rigor, as the minutiae of atomic interactions is unknown; which is why we can accurately model physical reality using probabilistic systems.
+
+weiss proposes that magnetic materials consist of micromagnets placed in regular array, but wilhelm lenz believes they can point in one of two directions. ising calculated the model for a 1d system by assuming that only nearest-neighbor interactions between the micro magnets.
+
+initially the model was dismissed because it was incompatible with heisenbergs theory of ferromagnetism, but was shown in 1936 by peierls to exhibit ferromagnetism in 2 dimensions
+
+Physics preliminaries:
+
+-   mathematical structure that can represent a variety of physical phenomena
+
+-   model is a lattice with each particle assigned to a lattice site
+
+-   particle has intrinsic angular momentum ($\sigma$)
+
+-   (up or down)
+
+-   \$\$ \\sum\_{i=1}\^n x_i \$\$
+
+    $$\Sigma$$
+
+-   
+
+```{=tex}
+\begin{equation}
+```
+E=-J \\sum\_{i, j=n n(i)}\^N s_i s_j-H \\sum\_{i=1}\^N s_i
+
+```{=tex}
+\end{equation}
+```
+$$E=-J \sum_{i, j=n n(i)}^N s_i s_j-H \sum_{i=1}^N s_i$$
+
+Theories prior to ising :
+
+-   1831 michael farady presents paper on electromagnetism to the british royal society. he created a conducting disk which uses a magnet to generate an electric current.
+
+-   1860s - James Clerk Maxwell introduces concept of ensemble to understand statistical mechanics of gasses. group of systems considered to be equivalent (NVT - same \# of atoms, same volume, same temperature) systems have microstates, specific configurations a system can occupy within probability of its fluctuations. ex temp of system, temp is an average, but actual atoms can be in different places of the entire system. microstates are distinct arrangements.
+
+<!-- -->
+
+-   1870s - boltzmann wants to understand the behavior of gases in terms of the motion and interactions of atoms and molecules, prior to this they were explained by macroscopic models.
+
+    -   "the behavior of a macroscopic system can be understood in terms of the statistical distribution of the energy levels of its microscopic particles" where the distribution is determined by the temperature of the system (which is a measure of average kinetic energy)
+
+    -   entropy - measure of disorder (randomness) of system - tends to increase over time.
+
+    -   statistical approach allows us to predict the behavior of a system based on the average number of particles, rather than trying to track each particle.
+
+    -   entropy mattered as the temperature of the gas increased, the kinetic energy of the molecules increases, leading to more disordered configurations.
+
+    -   implies that at lower levels the system becomes more ordered
+
+    -   NVT CANONICAL- boltzmann updates nvt based on idea of "heat bath". introduces partition function and boltzmann distribution to understand thermodynamics of gaes and other systems in equilibrium with a heat bath at a constant temperature.
+
+    -   heat bath is a larger system that transfers heat with the system of study
+
+    -   boltzmann distribution explains the probability of a given microstate of the system:
+
+    -   $$
+        P(E) = (1/Z) * exp(-E/k_B T)
+        $$
+
+    -   $$
+        Z = \Sigma(exp(-E/k_B T))
+        $$
+
+    -   z = partition function, sums over all potential configurations of energy of system.
+
+        "boltzmann function over all possible energy states of system"
+
+    -   partition function calculates probability of a system being in a particular energy state as a function of temperature, gibbs sampler is probability of system being in particular energy state and a particular set of other variables.
+
+    -   called partition b/c it encodes how probabilities are partitioned among different microstates.
+
+<!-- -->
+
+-   1895 - pierre curie defines 3 classes of magnetic substances:
+
+    -   diamagnetic - not magnetic because they dont have unpaired electrons
+
+    -   ferromagnetic - strong tendency to become magnetized even in the absence of an external magnetic field because their spins tend to align with each other- but have a critical temperature (curie temp) which above this temp the material becomes paramagnetic because heat means the particles are all in different directions
+
+    -   paramagnetic - unpaired electons and magnetic moment, but moment is weak and they tend not to align with eachother
+
+        net magnetic moment - measure of tendency to align with a magnetic field "strength and orientation of a magnetic object" (vector quantity)
+
+    -   Curie Law - magnetic susceptibility of a paramagnetic substance varies inversely with absolute temperature
+
+-   1852 - wilhelm weber creates model based on idea that magnetic matter consists of "tiny magnetic needles" representing an atom/molecule with their own magnetic moment.
+
+-   1905 - Paul Langevin (curies student) applies boltzmanns statistical ideas to the field of magnetism
+
+    -   determines the intensity of magnetization by applying boltzmanns theory to a gas of molecules
+
+-   1920 (\~) general agreement that magnetic materials consist of elementary micromagnets, boltzmann statistical formalism is the right tool to describe theoretically.
+
+    -   Pierre weiss's idea of lattice array doesn't yet include ability to point in two directions
+
+    -   Lenz shares work showing that curies law underpins the laws of paramagnetism, and believes that para and ferro magnetism are fundamentally connected.
+
+    -   idea was that up until that point- magnetism was thought to be something that followed a crystal structure, which could explain some phenomena, but not all. Giving the atomic magnets ability to rotate couldn't work with solid objects, but what he found via experimentation on the crystal structure of pyrrhotite (which exhibits a hexagonal structure). it was not possible to change the magnetization of a sample much by applying an external field, but he noticed that he could change the orientation of the magnetization
+
+-   1925 ising does the calculations for lenz's model as his phd thesis (but incorrectly generalizes his assumptions about 1d model to 2/3d)
+
+-   so we have farady explaining electromagnetism, boltzmann and curie creating the physical laws which will underpin the properties of ferromagnetism, langevin and weiss laying the groundwork for the theory, lenz coming up with a model from theory and experiment, and ising finalizing the calculations.
